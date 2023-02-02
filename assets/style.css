@@ -10,11 +10,6 @@ header {
     text-align: center;
 }
 
-footer {
-    width: 100%;
-    text-align: center;
-}
-
 .grid {
     width: 100%;
     display: flex;
@@ -48,3 +43,21 @@ footer {
     background-color: darkgray;
 }
 
+.controls {
+    width: 100%;
+    display: flex;
+    flex-direction: horizontal;
+    background-color: darkslategray;
+}
+
+.button-area {
+    width: 24.8%;
+    height: 100px;
+    background-color: darkblue;
+    margin: auto;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+}

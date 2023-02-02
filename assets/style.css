@@ -17,12 +17,14 @@ footer {
 
 .grid {
     width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 .column {
-    flex-direction: column;
-    display: inline-flex;
     width: 2.83%;
+    display: inline-flex;
+    flex-direction: column;
     margin: auto;
 }
 
@@ -30,6 +32,19 @@ footer {
     width: 100%;
     height: 0;
     padding-bottom: 100%;
-    background-color: green;
+    border-top-color: black;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.cell1, .cell2, .cell4, .cell6, .cell8, .cell9, .cell11, .cell13 {
+    background-color: white;
+}
+
+.cell3, .cell5, .cell7, .cell10, .cell12 {
+    background-color: darkgray;
 }
 

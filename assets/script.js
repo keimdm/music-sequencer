@@ -21,6 +21,7 @@ let clip12 = new Audio("./assets/sounds/violin/violinNote12.mp3");
 let clip13 = new Audio("./assets/sounds/violin/violinNote13.mp3");
 
 var currentPlaybackLocation = 1;
+var tempoDelay = 250;
 
 //set up column count input
 let columnCount = document.getElementById("columnCount");
@@ -30,17 +31,23 @@ columnCount.addEventListener('change', (event) => {
     columnChange();
 })
 
+//set up tempo input
+let tempoInput = document.getElementById("tempo");
+
+//set up listener to change the tempo
+tempoInput.addEventListener('change', (event) => {
+    tempoChange();
+})
+
 //start playing if it isn't already, stop playing if it is (on button press)
 function playButtonPress() {
     if (playbackOn === false) {
-        console.log("pressed play")
         playbackOn = true;
         currentPlaybackLocation = 1;
         startPlayback();
     }
     else {
         clearInterval(refreshIntervalID);
-        console.log("pressed stop")
         var previousPlaybackColumn = 0;
         if (currentPlaybackLocation === 1) {
             previousPlaybackColumn = document.getElementById("column" + columnsEntered.toString());
@@ -58,7 +65,7 @@ function playButtonPress() {
 
 //starts playback loop
 function startPlayback() {
-    refreshIntervalID = setInterval(playbackLoop, 250);
+    refreshIntervalID = setInterval(playbackLoop, tempoDelay);
 }
 
 //playback loop
@@ -218,4 +225,20 @@ function columnChange() {
             }
         }
     }
+}
+
+//update tempo based on input
+function tempoChange() {
+    tempoEntered = Number(document.getElementById("tempo").value);
+    //enforce min and max
+    if (tempoEntered > 1000) {
+        columnsEntered = 1000;
+        document.getElementById("tempo").value = 1000;
+    }
+    if (tempoEntered < 1) {
+        tempoEntered = 1;
+        document.getElementById("tempo").value = 1
+    }
+    //update tempo delay based on tempoEntered
+    tempoDelay = Math.floor(60000 / tempoEntered);
 }

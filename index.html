@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Sequencer</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <!--Header at top of screen-->
+    <header>
+        <h1>Music Sequencer</h1>
+    </header>
+    <!--Main content including grid and controls-->
+    <main>
+        <!--Main grid of notes, arranged into 32 columns and 13 rows-->
+        <section class="grid">
+            <div class="column" id="column1" onclick="columnClick(1)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column2" onclick="columnClick(2)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column3" onclick="columnClick(3)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column4" onclick="columnClick(4)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column5" onclick="columnClick(5)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column6" onclick="columnClick(6)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column7" onclick="columnClick(7)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column8" onclick="columnClick(8)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column9" onclick="columnClick(9)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column10" onclick="columnClick(10)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column11" onclick="columnClick(11)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column12" onclick="columnClick(12)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column13" onclick="columnClick(13)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column14" onclick="columnClick(14)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column15" onclick="columnClick(15)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column16" onclick="columnClick(16)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column17" onclick="columnClick(17)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column18" onclick="columnClick(18)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column19" onclick="columnClick(19)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column20" onclick="columnClick(20)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column21" onclick="columnClick(21)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column22" onclick="columnClick(22)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column23" onclick="columnClick(23)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column24" onclick="columnClick(24)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column25" onclick="columnClick(25)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column26" onclick="columnClick(26)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column27" onclick="columnClick(27)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column28" onclick="columnClick(28)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column29" onclick="columnClick(29)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column30" onclick="columnClick(30)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column31" onclick="columnClick(31)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+            <div class="column" id="column32" onclick="columnClick(32)">
+                <div class="cell cell1" onclick="cellClick(1)"></div>
+                <div class="cell cell2" onclick="cellClick(2)"></div>
+                <div class="cell cell3" onclick="cellClick(3)"></div>
+                <div class="cell cell4" onclick="cellClick(4)"></div>
+                <div class="cell cell5" onclick="cellClick(5)"></div>
+                <div class="cell cell6" onclick="cellClick(6)"></div>
+                <div class="cell cell7" onclick="cellClick(7)"></div>
+                <div class="cell cell8" onclick="cellClick(8)"></div>
+                <div class="cell cell9" onclick="cellClick(9)"></div>
+                <div class="cell cell10" onclick="cellClick(10)"></div>
+                <div class="cell cell11" onclick="cellClick(11)"></div>
+                <div class="cell cell12" onclick="cellClick(12)"></div>
+                <div class="cell cell13" onclick="cellClick(13)"></div>
+            </div>
+        </section>
+        <!--sequencer controls-->
+        <section class="controls">
+            <!--Add controls for instrument, tempo, play button/stop button, set number of columns-->
+            <div class="button-area">
+                <label for="instruments">Instrument</label>
+                <select name="instruments" id="instruments">
+                    <option selected value="biu">BIU</option>
+                </select>
+            </div>
+            <div class="button-area">
+                <label for="tempo">Tempo</label>
+                <input type="number" name="tempo" id="tempo">
+            </div>
+            <div class="button-area">
+                <label for="play">Play</label>
+                <button>Play</button>
+            </div>
+            <div class="button-area">
+                <label for="columnCount">No. Columns</label>
+                <input type="number" name="columnCount" id="columnCount">
+            </div>
+        </section>
+    </main>
+    <!--footer at bottom of screen-->
+    <footer>
+        <h4>Made by David Keim, February 2023</h4>
+    </footer>
+    <script src="./assets/script.js"></script>
+</body>
+</html>

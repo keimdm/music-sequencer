@@ -71,6 +71,10 @@ header {
     background-color: #50514F;
 }
 
+.cellInPlayback {
+    background-color: yellow;
+}
+
 .cellSelected {
     background-color: red;
 }

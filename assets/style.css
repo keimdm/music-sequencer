@@ -71,6 +71,10 @@ header {
     background-color: #50514F;
 }
 
+.cellSelected {
+    background-color: red;
+}
+
 .cell1:hover, .cell2:hover, .cell4:hover, .cell6:hover, .cell8:hover, .cell9:hover, .cell11:hover, .cell13:hover {
     background-color: lightgreen;
 }

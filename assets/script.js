@@ -1,6 +1,6 @@
 var columnClicked = 0;
 var rowClicked = 0;
-var columnsEntered = 0;
+var columnsEntered = 32;
 
 let columnCount = document.getElementById("columnCount");
 
@@ -9,10 +9,17 @@ columnCount.addEventListener('change', (event) => {
 })
 
 function columnClick(x) {
-    if (x <= columnsEntered) {
+    if (Number(x) <= columnsEntered) {
         columnClicked = x;
         if (rowClicked != 0 && columnClicked != 0) {
-            console.log("Column: " + columnClicked.toString() + ", " + "Row: " + rowClicked.toString());
+            var selectedColumn = document.getElementById("column" + columnClicked.toString());
+            var selectedCell = selectedColumn.children[rowClicked - 1];
+            if (selectedCell.classList.contains("cellSelected")) {
+                selectedCell.classList.remove("cellSelected");
+            }
+            else {
+                selectedCell.classList.add("cellSelected");
+            }
         }
     }
 }
@@ -42,7 +49,13 @@ function columnChange() {
         //document.getElementById("column" + j.toString()).style.display = "none";
         var currentAnimation = document.getElementById("column" + j.toString()).style.animationName;
         if (currentAnimation != "hideColumns") {
-            document.getElementById("column" + j.toString()).style.animationName = "hideColumns";
+            var columnToClear = document.getElementById("column" + j.toString());
+            columnToClear.style.animationName = "hideColumns";
+            for (var y = 0; y < columnToClear.children.length; y++) {
+                if (columnToClear.children[y].classList.contains("cellSelected")) {
+                    columnToClear.children[y].classList.remove("cellSelected");
+                }
+            }
         }
     }
 }

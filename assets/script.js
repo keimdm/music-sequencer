@@ -9,11 +9,12 @@ columnCount.addEventListener('change', (event) => {
 })
 
 function columnClick(x) {
-    columnClicked = x;
-    if (rowClicked != 0 && columnClicked != 0) {
-        console.log("Column: " + columnClicked.toString() + ", " + "Row: " + rowClicked.toString());
+    if (x <= columnsEntered) {
+        columnClicked = x;
+        if (rowClicked != 0 && columnClicked != 0) {
+            console.log("Column: " + columnClicked.toString() + ", " + "Row: " + rowClicked.toString());
+        }
     }
-    console.log
 }
 
 function cellClick(x) {
@@ -31,9 +32,17 @@ function columnChange() {
         document.getElementById("columnCount").value = 1
     }
     for (i = 1; i < columnsEntered + 1; i++) {
-        document.getElementById("column" + i.toString()).style.display = "inline-flex";
+        //document.getElementById("column" + i.toString()).style.display = "inline-flex";
+        var currentAnimation = document.getElementById("column" + i.toString()).style.animationName;
+        if (currentAnimation === "hideColumns") {
+            document.getElementById("column" + i.toString()).style.animationName = "showColumns";
+        }
     }
     for (j = columnsEntered + 1; j < 33; j++) {
-        document.getElementById("column" + j.toString()).style.display = "none";
+        //document.getElementById("column" + j.toString()).style.display = "none";
+        var currentAnimation = document.getElementById("column" + j.toString()).style.animationName;
+        if (currentAnimation != "hideColumns") {
+            document.getElementById("column" + j.toString()).style.animationName = "hideColumns";
+        }
     }
 }

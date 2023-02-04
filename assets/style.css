@@ -26,11 +26,28 @@ header {
     display: inline-flex;
     flex-direction: column;
     margin: 0;
+    animation-name: idle;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideColumns {
+    0% {width: 2.83%; visibility: visible;}
+    100% {width: 0%; visibility: hidden;}
+}
+
+@keyframes idle {
+
+}
+
+@keyframes showColumns {
+    0% {width: 0%; visibility: hidden;}
+    100% {width: 2.83%; visibility: visible;}
 }
 
 .cell {
     width: 100%;
-    height: 0;
+    height: 40px;
     padding-bottom: 100%;
     border-top-color: white;
     border-top-style: solid;
@@ -72,7 +89,7 @@ header {
 .button-area {
     width: 24.8%;
     height: 100px;
-    background-color: darkblue;
+    background-color: #50514F;
     margin: auto;
     display: flex;
     justify-content: center;

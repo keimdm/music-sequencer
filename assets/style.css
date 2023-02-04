@@ -2,52 +2,71 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: darkslategray
+    background-color: #50514F;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
 }
 
 header {
     width: 100%;
     text-align: center;
+    margin: 1em 0;
 }
 
 .grid {
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .column {
     width: 2.83%;
     display: inline-flex;
     flex-direction: column;
-    margin: auto;
+    margin: 0;
 }
 
 .cell {
     width: 100%;
     height: 0;
     padding-bottom: 100%;
-    border-top-color: black;
+    border-top-color: white;
     border-top-style: solid;
     border-top-width: 1px;
-    border-bottom-color: black;
+    border-bottom-color: white;
     border-bottom-style: solid;
     border-bottom-width: 1px;
+    border-left-color: white;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: white;
+    border-right-style: solid;
+    border-right-width: 1px;
 }
 
 .cell1, .cell2, .cell4, .cell6, .cell8, .cell9, .cell11, .cell13 {
-    background-color: white;
+    background-color: #70716F;
 }
 
 .cell3, .cell5, .cell7, .cell10, .cell12 {
-    background-color: darkgray;
+    background-color: #50514F;
+}
+
+.cell1:hover, .cell2:hover, .cell4:hover, .cell6:hover, .cell8:hover, .cell9:hover, .cell11:hover, .cell13:hover {
+    background-color: lightgreen;
+}
+
+.cell3:hover, .cell5:hover, .cell7:hover, .cell10:hover, .cell12:hover {
+    background-color: green;
 }
 
 .controls {
     width: 100%;
     display: flex;
     flex-direction: horizontal;
-    background-color: darkslategray;
+    background-color: #50514F;
 }
 
 .button-area {
@@ -55,6 +74,9 @@ header {
     height: 100px;
     background-color: darkblue;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {

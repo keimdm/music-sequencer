@@ -1,12 +1,69 @@
 var columnClicked = 0;
 var rowClicked = 0;
 var columnsEntered = 32;
+var playbackOn = false;
+var refreshIntervalID = 0;
+var testClip = new Audio("./assets/biu.mp3");
+var currentPlaybackLocation = 1;
 
 let columnCount = document.getElementById("columnCount");
 
 columnCount.addEventListener('change', (event) => {
     columnChange();
 })
+
+function playButtonPress() {
+    if (playbackOn === false) {
+        console.log("pressed play")
+        playbackOn = true;
+        currentPlaybackLocation = 1;
+        startPlayback();
+    }
+    else {
+        clearInterval(refreshIntervalID);
+        console.log("pressed stop")
+        for (var c = 0; c < document.getElementById("column" + (currentPlaybackLocation - 1).toString()).children.length; c++) {
+            document.getElementById("column" + (currentPlaybackLocation - 1).toString()).children[c].classList.remove("cellInPlayback");
+        }
+        currentPlaybackLocation = 0;
+        playbackOn = false;
+    }
+}
+
+function startPlayback() {
+    refreshIntervalID = setInterval(playbackLoop, 250);
+}
+
+function playbackLoop() {
+    var previousPlaybackColumn = 0;
+    if (currentPlaybackLocation === 1) {
+        previousPlaybackColumn = document.getElementById("column" + columnsEntered.toString());
+    }
+    else {
+        previousPlaybackColumn = document.getElementById("column" + (currentPlaybackLocation - 1).toString());
+    }
+    for (var b = 0; b < previousPlaybackColumn.children.length; b++) {
+        previousPlaybackColumn.children[b].classList.remove("cellInPlayback");
+        console.log("loop 1");
+    }
+    var selectedPlaybackColumn = document.getElementById("column" + currentPlaybackLocation.toString());
+    for (var a = 0; a < selectedPlaybackColumn.children.length; a++) {
+        console.log("loop 2");
+        selectedPlaybackColumn.children[a].classList.add("cellInPlayback");
+        if (selectedPlaybackColumn.children[a].classList.contains("cellSelected")) {
+            testClip.pause();
+            testClip.currentTime = 0;
+            console.log("biu");
+            testClip.play();
+        }
+    }
+    if (currentPlaybackLocation >= columnsEntered) {
+        currentPlaybackLocation = 1;
+    }
+    else {
+        currentPlaybackLocation = currentPlaybackLocation + 1;
+    }
+}
 
 function columnClick(x) {
     if (Number(x) <= columnsEntered) {

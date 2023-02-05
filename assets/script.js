@@ -256,8 +256,8 @@ function instrumentChange() {
     instrumentEntered = document.getElementById("instruments").value;
     var keyword = "";
     switch (instrumentEntered) {
-        case "biu":
-            keyword = "violin";
+        case "doo":
+            keyword = "doo";
             break;
         case "violin":
             keyword = "violin";

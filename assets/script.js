@@ -6,19 +6,19 @@ var playbackOn = false;
 var refreshIntervalID = 0;
 
 //import default audio clips
-let clip1 = new Audio("./assets/sounds/violin/violinNote1.mp3");
-let clip2 = new Audio("./assets/sounds/violin/violinNote2.mp3");
-let clip3 = new Audio("./assets/sounds/violin/violinNote3.mp3");
-let clip4 = new Audio("./assets/sounds/violin/violinNote4.mp3");
-let clip5 = new Audio("./assets/sounds/violin/violinNote5.mp3");
-let clip6 = new Audio("./assets/sounds/violin/violinNote6.mp3");
-let clip7 = new Audio("./assets/sounds/violin/violinNote7.mp3");
-let clip8 = new Audio("./assets/sounds/violin/violinNote8.mp3");
-let clip9 = new Audio("./assets/sounds/violin/violinNote9.mp3");
-let clip10 = new Audio("./assets/sounds/violin/violinNote10.mp3");
-let clip11 = new Audio("./assets/sounds/violin/violinNote11.mp3");
-let clip12 = new Audio("./assets/sounds/violin/violinNote12.mp3");
-let clip13 = new Audio("./assets/sounds/violin/violinNote13.mp3");
+var clip1 = new Audio("./assets/sounds/violin/violinNote1.mp3");
+var clip2 = new Audio("./assets/sounds/violin/violinNote2.mp3");
+var clip3 = new Audio("./assets/sounds/violin/violinNote3.mp3");
+var clip4 = new Audio("./assets/sounds/violin/violinNote4.mp3");
+var clip5 = new Audio("./assets/sounds/violin/violinNote5.mp3");
+var clip6 = new Audio("./assets/sounds/violin/violinNote6.mp3");
+var clip7 = new Audio("./assets/sounds/violin/violinNote7.mp3");
+var clip8 = new Audio("./assets/sounds/violin/violinNote8.mp3");
+var clip9 = new Audio("./assets/sounds/violin/violinNote9.mp3");
+var clip10 = new Audio("./assets/sounds/violin/violinNote10.mp3");
+var clip11 = new Audio("./assets/sounds/violin/violinNote11.mp3");
+var clip12 = new Audio("./assets/sounds/violin/violinNote12.mp3");
+var clip13 = new Audio("./assets/sounds/violin/violinNote13.mp3");
 
 var currentPlaybackLocation = 1;
 var tempoDelay = 250;
@@ -37,6 +37,14 @@ let tempoInput = document.getElementById("tempo");
 //set up listener to change the tempo
 tempoInput.addEventListener('change', (event) => {
     tempoChange();
+})
+
+//set up instrument
+let instrumentInput = document.getElementById("instruments");
+
+//set up listener to change the instrument
+instrumentInput.addEventListener('change', (event) => {
+    instrumentChange();
 })
 
 //start playing if it isn't already, stop playing if it is (on button press)
@@ -241,4 +249,33 @@ function tempoChange() {
     }
     //update tempo delay based on tempoEntered
     tempoDelay = Math.floor(60000 / tempoEntered);
+}
+
+//update instrument based on input
+function instrumentChange() {
+    instrumentEntered = document.getElementById("instruments").value;
+    var keyword = "";
+    switch (instrumentEntered) {
+        case "doo":
+            keyword = "doo";
+            break;
+        case "violin":
+            keyword = "violin";
+            break;
+    }
+    if (keyword != "") {
+        clip1 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note1.mp3");
+        clip2 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note2.mp3");
+        clip3 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note3.mp3");
+        clip4 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note4.mp3");
+        clip5 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note5.mp3");
+        clip6 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note6.mp3");
+        clip7 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note7.mp3");
+        clip8 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note8.mp3");
+        clip9 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note9.mp3");
+        clip10 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note10.mp3");
+        clip11 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note11.mp3");
+        clip12 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note12.mp3");
+        clip13 = new Audio("./assets/sounds/" + keyword + "/" + keyword +"Note13.mp3");
+    }
 }
